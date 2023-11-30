@@ -32,10 +32,18 @@ typedef struct SeqList1
 
 void SeqListInit(SL2* ps);
 void SeqListPrint(SL2* ps);
+void SeqListDestory(SL2* ps);
 void SeqListPushBack(SL2* ps, SQDataType x);   //Î²²å
 void SeqListPushFront(SL2* ps, SQDataType x);  //Í·²å
 void SeqListPopBack(SL2* ps); //Î²É¾
 void SeqListPopFront(SL2* ps);//Í·É¾
+
+void SeqListInsert(SL2* ps, int pos, SQDataType x);
+void SeqListErase(SL2* ps, int pos);
+
+
+int SeqListFind(SL2* ps, SQDataType x);
+void SeqListModify(SL2* ps, int pos, SQDataType x);
 
 
 #endif /* __SEQLIST_H__ */

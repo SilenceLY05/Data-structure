@@ -220,9 +220,19 @@ void TestSeqList1()
 	SeqListPopBack(&s2);
 	SeqListPrint(&s2);
 }
+
+void menu()
+{
+	printf("**************************************\n");
+	printf("*****  1.尾插数据    2.头插数据  *****\n");
+	printf("*****  3.尾删数据    4.头删数据  *****\n");
+	printf("*****  5.打印数据    6.退出      *****\n");
+	printf("**************************************\n");
+}
 int main()
 {
-	TestSeqList1();
+	//TestSeqList1();
+	menu();
 
 	return 0;
 }

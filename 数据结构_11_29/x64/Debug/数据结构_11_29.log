@@ -1,0 +1,3 @@
+﻿  test.c
+G:\C_数据结构\Data-structure\数据结构_11_29\test.c(118,33): warning C4020: “SListErase”: 实参太多
+  数据结构_11_29.vcxproj -> G:\C_数据结构\Data-structure\数据结构_11_29\x64\Debug\数据结构_11_29.exe
