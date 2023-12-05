@@ -191,44 +191,46 @@ void LevelOrder(BTNode* root)
 
 
 
-int main()
-{
-	BTNode* A = (BTNode *)malloc(sizeof(BTNode));
-	A->data = 'A';
-	A->left = NULL;
-	A->right = NULL;
-
-	BTNode* B = (BTNode*)malloc(sizeof(BTNode));
-	B->data = 'B';
-	B->left = NULL;
-	B->right = NULL;
-
-	BTNode* C = (BTNode*)malloc(sizeof(BTNode));
-	C->data = 'C';
-	C->left = NULL;
-	C->right = NULL;
-
-	BTNode* D = (BTNode*)malloc(sizeof(BTNode));
-	D->data = 'D';
-	D->left = NULL;
-	D->right = NULL;
-
-	BTNode* E = (BTNode*)malloc(sizeof(BTNode));
-	E->data = 'E';
-	E->left = NULL;
-	E->right = NULL;
-
-	A->left = B;
-	A->right = C;
-	B->left = D;
-	B->right = E;
-
-	/*int num = TreeSize(A);*/
-	int Asize = TreeLeafSize(A);
-	printf("%d \n", Asize);
-	LevelOrder(A);
-	return 0;
-}
+//int main()
+//{
+//	BTNode* A = (BTNode *)malloc(sizeof(BTNode));
+//	A->data = 'A';
+//	A->left = NULL;
+//	A->right = NULL;
+//
+//	BTNode* B = (BTNode*)malloc(sizeof(BTNode));
+//	B->data = 'B';
+//	B->left = NULL;
+//	B->right = NULL;
+//
+//	BTNode* C = (BTNode*)malloc(sizeof(BTNode));
+//	C->data = 'C';
+//	C->left = NULL;
+//	C->right = NULL;
+//
+//	BTNode* D = (BTNode*)malloc(sizeof(BTNode));
+//	D->data = 'D';
+//	D->left = NULL;
+//	D->right = NULL;
+//
+//	BTNode* E = (BTNode*)malloc(sizeof(BTNode));
+//	E->data = 'E';
+//	E->left = NULL;
+//	E->right = NULL;
+//
+//	A->left = B;
+//	A->right = C;
+//	B->left = D;
+//	B->right = E;
+//
+//
+//	InOrder(A);
+//	/*int num = TreeSize(A);*/
+//	//int Asize = TreeLeafSize(A);
+//	//printf("%d \n", Asize);
+//	//LevelOrder(A);
+//	return 0;
+//}
 
 
 
@@ -250,56 +252,149 @@ int main()
 
 
 
-//144 二叉树的前序遍历
-//给你二叉树的根节点 root ，返回它节点值的 前序 遍历。
-//这里i为什么不能用全局变量，测试时用好几个案例来进行测试，全局变量值会累加
-
-struct TreeNode {
-	int val;
-	struct TreeNode* left;
-	struct TreeNode* right;
-	
-};
-int TreeSize(struct TreeNode* root)
-{
-	return root == NULL ? 0 : TreeSize(root->right) + TreeSize(root->left) + 1;
-}
-
-void _prevOrder(struct TreeNode* root, int* a, int* i)
-{
-	if (root == NULL)
-		return;
-	a[(*i)] = root->val;
-	(*i)++;
-	_prevOrder(root->left, a, i);
-	_prevOrder(root->right, a, i);
-}
-
-int* preorderTraversal(struct TreeNode* root, int* returnSize) {
-	int size = TreeSize(root);
-	int* arr = (int*)malloc(size * sizeof(int));
-	int i = 0;
-	_prevOrder(root, arr, &i);
-	*returnSize = size;
-
-	return arr;
-}
-
-
-//104  二叉树的最大深度
-//给定一个二叉树 root ，返回其最大深度。二叉树的 最大深度 是指从根节点到最远叶子节点的最长路径上的节点数。
-int maxDepth(struct TreeNode* root) {
-
-	if (root == NULL)
-	{
-		return 0;
-	}
-
-	int leftnum = maxDepth(root->left);
-	int rightnum = maxDepth(root->right);
-	int max = leftnum > rightnum ? leftnum : rightnum;
-	return max + 1;
-}
+////144 二叉树的前序遍历
+////给你二叉树的根节点 root ，返回它节点值的 前序 遍历。
+////这里i为什么不能用全局变量，测试时用好几个案例来进行测试，全局变量值会累加
+//
+//struct TreeNode {
+//	int val;
+//	struct TreeNode* left;
+//	struct TreeNode* right;
+//	
+//};
+//
+//int TreeSize(struct TreeNode* root)
+//{
+//	return root == NULL ? 0 : TreeSize(root->right) + TreeSize(root->left) + 1;
+//}
+//
+//void _prevOrder(struct TreeNode* root, int* a, int* i)
+//{
+//	if (root == NULL)
+//		return;
+//	a[(*i)] = root->val;
+//	(*i)++;
+//	_prevOrder(root->left, a, i);
+//	_prevOrder(root->right, a, i);
+//}
+//
+//int* preorderTraversal(struct TreeNode* root, int* returnSize) {
+//	int size = TreeSize(root);
+//	int* arr = (int*)malloc(size * sizeof(int));
+//	int i = 0;
+//	_prevOrder(root, arr, &i);
+//	*returnSize = size;
+//
+//	return arr;
+//}
 
 
+////104  二叉树的最大深度
+////给定一个二叉树 root ，返回其最大深度。二叉树的 最大深度 是指从根节点到最远叶子节点的最长路径上的节点数。
+//int maxDepth(struct TreeNode* root) {
+//
+//	if (root == NULL)
+//	{
+//		return 0;
+//	}
+//
+//	int leftnum = maxDepth(root->left);
+//	int rightnum = maxDepth(root->right);
+//	int max = leftnum > rightnum ? leftnum : rightnum;
+//	return max + 1;
+//}
+
+
+
+
+////110 平衡二叉树
+////给定一个二叉树，判断它是否是高度平衡的二叉树。本题中，一棵高度平衡二叉树定义为：
+////一个二叉树每个节点的左右两个子树的高度差的绝对值不超过 1 。
+////思想：检查左右子树的高度差，如果高度差小于等于1，再检查当前节点的左右子树，如果当前节点的差大于1则直接返回false
+//int maxDepth(struct TreeNode* root) {
+//
+//	if (root == NULL)
+//	{
+//		return 0;
+//	}
+//
+//	int leftnum = maxDepth(root->left);
+//	int rightnum = maxDepth(root->right);
+//	int max = leftnum > rightnum ? leftnum : rightnum;
+//	return max + 1;
+//}
+//
+//bool isBalanced(struct TreeNode* root) {
+//	if (root == NULL)
+//	{
+//		return true;
+//	}
+//	int leftDepth = maxDepth(root->left);
+//	int rightDepth = maxDepth(root->right);
+//
+//	return (abs(leftDepth - rightDepth) <= 1) && isBalanced(root->left) && isBalanced(root->right);
+//}
+
+
+//void DestoryTree(struct TreeNode** root)
+//{
+//	if (*root == NULL)
+//		return;
+//	DestoryTree((*root)->left);
+//	DestoryTree((*root)->right);
+//
+//	free(*root);
+//	*root = NULL;
+//}
+
+
+
+////牛客网KY11 二叉树遍历
+////编一个程序，读入用户输入的一串先序遍历字符串，根据此字符串建立一个二叉树（以指针方式存储）。 
+////例如如下的先序遍历字符串： ABC##DE#G##F### 其中“#”表示的是空格，空格字符代表空树。建立起此二叉树以后，
+////再对二叉树进行中序遍历，输出遍历结果
+//typedef struct TreeNode {
+//	char val;
+//	struct TreeNode* left;
+//	struct TreeNode* right;
+//} TNode;
+//
+//TNode* BuildTree(char* str, int* num) {
+//	if (str[*num] == '#') {
+//		++(*num);
+//		return NULL;
+//	}
+//
+//	TNode* newnode = (TNode*)malloc(sizeof(TNode));
+//	if (newnode == NULL)
+//	{
+//		printf("malloc fail\n");
+//		exit(-1);
+//	}
+//	newnode->val = str[*num];
+//	++(*num);
+//	newnode->left = BuildTree(str, num);
+//	newnode->right = BuildTree(str, num);
+//
+//	return newnode;
+//}
+//
+//
+//void InOrder(struct TreeNode* root) {
+//	if (root == NULL)
+//		return;
+//	InOrder(root->left);
+//	printf("%c ", root->val);
+//	InOrder(root->right);
+//}
+//
+//int main() {
+//	char str[100];
+//	scanf("%s", str);
+//
+//	int i = 0;
+//	TNode* root = BuildTree(str, &i);
+//	InOrder(root);
+//	return 0;
+//}
 

@@ -1,0 +1,4 @@
+﻿  test.c
+G:\C_数据结构\Data-structure\12_03_排序算法01\test.c(1,1): warning C4335: 检测到 Mac 文件格式: 请将源文件转换为 DOS 格式或 UNIX 格式
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 main，函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中引用了该符号
+G:\C_数据结构\Data-structure\12_03_排序算法01\x64\Debug\12_03_排序算法01.exe : fatal error LNK1120: 1 个无法解析的外部命令

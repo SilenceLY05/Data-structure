@@ -1,0 +1,7 @@
+﻿  test.c
+G:\C_数据结构\Data-structure\数据结构_12_04_排序算法01\数据结构_12_04_排序算法01\test.c(267,8): warning C4244: “函数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 11 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  数据结构_12_04_排序算法01.vcxproj -> G:\C_数据结构\Data-structure\数据结构_12_04_排序算法01\x64\Release\数据结构_12_04_排序算法01.exe

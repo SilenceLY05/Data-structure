@@ -1,0 +1,3 @@
+﻿  test.c
+G:\C_数据结构\Data-structure\数据结构_12_04_排序算法01\数据结构_12_04_排序算法01\test.c(338,8): warning C4244: “函数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  数据结构_12_04_排序算法01.vcxproj -> G:\C_数据结构\Data-structure\数据结构_12_04_排序算法01\x64\Debug\数据结构_12_04_排序算法01.exe
