@@ -1,4 +1,3 @@
 ﻿  test.c
-G:\C_数据结构\Data-structure\数据结构_12_04_排序算法-快排\数据结构_12_04_排序算法-快排\test.c(279,25): warning C4020: “MergeSort”: 实参太多
-G:\C_数据结构\Data-structure\数据结构_12_04_排序算法-快排\数据结构_12_04_排序算法-快排\test.c(285,8): warning C4244: “函数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+G:\C_数据结构\Data-structure\数据结构_12_04_排序算法-快排\数据结构_12_04_排序算法-快排\test.c(390,8): warning C4244: “函数”: 从“time_t”转换到“unsigned int”，可能丢失数据
   数据结构_12_04_排序算法-快排.vcxproj -> G:\C_数据结构\Data-structure\数据结构_12_04_排序算法-快排\x64\Debug\数据结构_12_04_排序算法-快排.exe

@@ -1,0 +1,117 @@
+﻿  Stack.c
+  test.c
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(6,45): error C2146: 语法错误: 缺少“)”(在标识符“pos”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(6,45): error C2081: “PT”: 形参表中的名称非法
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(6,45): error C2061: 语法错误: 标识符“pos”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(6,45): error C2059: 语法错误:“;”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(6,48): error C2059: 语法错误:“)”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(6,50): error C2449: 在文件范围内找到“{”(是否缺少函数头?)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(15,1): error C2059: 语法错误:“}”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(19,50): error C2146: 语法错误: 缺少“)”(在标识符“cur”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(19,50): error C2081: “PT”: 形参表中的名称非法
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(19,50): error C2061: 语法错误: 标识符“cur”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(19,50): error C2059: 语法错误:“;”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(19,53): error C2059: 语法错误:“)”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(19,55): error C2449: 在文件范围内找到“{”(是否缺少函数头?)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(68,1): error C2059: 语法错误:“}”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(112,20): error C2065: “path”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(112,20): warning C4133: “函数”: 从“int *”到“ST *”的类型不兼容
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(114,8): error C2065: “PT”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(114,8): error C2146: 语法错误: 缺少“;”(在标识符“entry”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(114,14): error C2065: “entry”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(114,16): error C2059: 语法错误:“{”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(115,9): warning C4013: “GetMazePath”未定义；假设外部返回 int
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(115,41): error C2065: “entry”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(117,9): warning C4013: “PrintPath”未定义；假设外部返回 int
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(120,23): error C2065: “path”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(120,23): warning C4133: “函数”: 从“int *”到“ST *”的类型不兼容
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(147,45): error C2146: 语法错误: 缺少“)”(在标识符“pos”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(147,45): error C2081: “PT”: 形参表中的名称非法
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(147,45): error C2061: 语法错误: 标识符“pos”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(147,45): error C2059: 语法错误:“;”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(147,48): error C2059: 语法错误:“)”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(147,50): error C2449: 在文件范围内找到“{”(是否缺少函数头?)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(156,1): error C2059: 语法错误:“}”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(160,50): error C2146: 语法错误: 缺少“)”(在标识符“cur”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(160,50): error C2081: “PT”: 形参表中的名称非法
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(160,50): error C2061: 语法错误: 标识符“cur”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(160,50): error C2059: 语法错误:“;”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(160,53): error C2059: 语法错误:“,”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(160,64): error C2059: 语法错误:“)”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(215,6): error C2371: “PrintPath”: 重定义；不同的基类型
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(223,12): error C2065: “PT”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(223,12): error C2146: 语法错误: 缺少“;”(在标识符“top”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(223,16): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(224,31): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(224,32): error C2224: “.row”的左侧必须具有结构/联合类型
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(224,40): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(224,41): error C2224: “.col”的左侧必须具有结构/联合类型
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(224,16): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(224,16): message : 占位符和其参数预计 2 可变参数，但提供的却是 0 参数
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(224,16): message : 缺失的可变参数 1 为格式字符串“%d”所需
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(227,8): error C2065: “PT”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(227,8): error C2146: 语法错误: 缺少“;”(在标识符“top”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(227,12): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(228,26): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(228,27): error C2224: “.row”的左侧必须具有结构/联合类型
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(228,35): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(228,36): error C2224: “.col”的左侧必须具有结构/联合类型
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(228,12): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(228,12): message : 占位符和其参数预计 2 可变参数，但提供的却是 0 参数
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(228,12): message : 缺失的可变参数 1 为格式字符串“%d”所需
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(234,5): error C2084: 函数“int main()”已有主体
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(90): message : 参见“main”的前一个定义
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(252,20): error C2065: “path”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(252,20): warning C4133: “函数”: 从“int *”到“ST *”的类型不兼容
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(254,8): error C2065: “PT”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(254,8): error C2146: 语法错误: 缺少“;”(在标识符“entry”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(254,14): error C2065: “entry”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(254,16): error C2059: 语法错误:“{”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(255,41): error C2065: “entry”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(256,24): error C2065: “path”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(262,23): error C2065: “path”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(262,23): warning C4133: “函数”: 从“int *”到“ST *”的类型不兼容
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(299,45): error C2146: 语法错误: 缺少“)”(在标识符“pos”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(299,45): error C2081: “PT”: 形参表中的名称非法
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(299,45): error C2061: 语法错误: 标识符“pos”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(299,45): error C2059: 语法错误:“;”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(299,48): error C2059: 语法错误:“)”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(299,50): error C2449: 在文件范围内找到“{”(是否缺少函数头?)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(308,1): error C2059: 语法错误:“}”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(313,50): error C2146: 语法错误: 缺少“)”(在标识符“cur”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(313,50): error C2081: “PT”: 形参表中的名称非法
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(313,50): error C2061: 语法错误: 标识符“cur”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(313,50): error C2059: 语法错误:“;”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(313,53): error C2059: 语法错误:“,”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(313,64): error C2059: 语法错误:“)”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(370,6): error C2371: “PrintPath”: 重定义；不同的基类型
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(378,12): error C2065: “PT”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(378,12): error C2146: 语法错误: 缺少“;”(在标识符“top”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(378,16): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(379,31): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(379,32): error C2224: “.row”的左侧必须具有结构/联合类型
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(379,40): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(379,41): error C2224: “.col”的左侧必须具有结构/联合类型
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(379,16): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(379,16): message : 占位符和其参数预计 2 可变参数，但提供的却是 0 参数
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(379,16): message : 缺失的可变参数 1 为格式字符串“%d”所需
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(382,8): error C2065: “PT”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(382,8): error C2146: 语法错误: 缺少“;”(在标识符“top”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(382,12): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(383,26): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(383,27): error C2224: “.row”的左侧必须具有结构/联合类型
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(383,35): error C2065: “top”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(383,36): error C2224: “.col”的左侧必须具有结构/联合类型
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(383,12): warning C4473: “printf”: 没有为格式字符串传递足够的参数
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(383,12): message : 占位符和其参数预计 2 可变参数，但提供的却是 0 参数
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(383,12): message : 缺失的可变参数 1 为格式字符串“%d”所需
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(407,20): error C2065: “path”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(407,20): warning C4133: “函数”: 从“int *”到“ST *”的类型不兼容
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(409,8): error C2065: “PT”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(409,8): error C2146: 语法错误: 缺少“;”(在标识符“entry”的前面)
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(409,14): error C2065: “entry”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(409,16): error C2059: 语法错误:“{”
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(410,37): error C2065: “entry”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(421,23): error C2065: “path”: 未声明的标识符
+G:\C_数据结构\Data-structure\数据结构_12_05_迷宫\数据结构_12_05_迷宫\test.c(421,23): warning C4133: “函数”: 从“int *”到“ST *”的类型不兼容
+  正在生成代码...
