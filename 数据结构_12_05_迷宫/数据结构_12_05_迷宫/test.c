@@ -274,19 +274,18 @@ int main() {
 
 //ÕýÈ·´úÂë
 
-void StackCopy(ST* ppath, ST* pminpath)
+void StackCopy(ST* source, ST* dest)
 {
     //StackInit(pminpath);
     /*for(int i = 0;i<ppath->top;i++)
     {
         StackPush(pminpath, ppath->_a[i]);
     }*/
-    pminpath->_a = (STDataType*)malloc(sizeof(STDataType*) * ppath->capacity);
-    memcpy(pminpath->_a, ppath->_a, sizeof(STDataType) * ppath->top);
-    pminpath->top = ppath->top;
-    pminpath->capacity = ppath->capacity;
+    dest->_a = (STDataType*)malloc(sizeof(STDataType) * source->capacity);
+    memcpy(dest->_a, source->_a, sizeof(STDataType) * source->capacity);
+    dest->capacity = source->capacity;
+    dest->top = source->top;
 }
-
 
 
 
