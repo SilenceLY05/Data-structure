@@ -11,14 +11,24 @@
 typedef int SLTDataType;
 
 
-typedef struct SListNode
+struct SListNode
 {
 	SLTDataType data;
-	SLTNode* next;
-}SLTNode;
+	struct SListNode* next;
+};
 
+typedef struct SListNode SLTNode;
 
-
+void SListInit();
+void SListPrint(SLTNode* phead);
+SLTNode* BuySListNode(SLTDataType x);
+void SListPushBack(SLTNode** pphead, SLTDataType x);
+void SListPushFront(SLTNode** pphead, SLTDataType x);
+void SListPopBack(SLTNode** pphead);
+void SListPopFront(SLTNode** pphead);
+SLTNode* SListFint(SLTNode* phead, SLTDataType x);
+void SListInsert(SLTNode** pphead, SLTNode* pos, SLTDataType x);
+void SListErase(SLTNode** pphead, SLTNode* pos);
 
 
 #endif /* __SLIST_H__ */

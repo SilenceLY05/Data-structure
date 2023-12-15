@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="List.c" />
     <ClCompile Include="SeqList.c" />
     <ClCompile Include="SList.c" />
     <ClCompile Include="test.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="List.h" />
     <ClInclude Include="SeqList.h" />
     <ClInclude Include="SList.h" />
   </ItemGroup>
