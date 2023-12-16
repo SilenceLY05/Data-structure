@@ -1,4 +1,6 @@
-﻿  List.c
+﻿  Queue.c
   test.c
+G:\C_数据结构\Data-structure\数据结构_复习_12_13\数据结构_复习_12_13\test.c(347,3): warning C4033: “TreeLeafSize”必须返回值
   正在生成代码...
+G:\C_数据结构\Data-structure\数据结构_复习_12_13\数据结构_复习_12_13\test.c(352): warning C4715: “TreeLeafSize”: 不是所有的控件路径都返回值
   数据结构_复习_12_13.vcxproj -> G:\C_数据结构\Data-structure\数据结构_复习_12_13\x64\Debug\数据结构_复习_12_13.exe

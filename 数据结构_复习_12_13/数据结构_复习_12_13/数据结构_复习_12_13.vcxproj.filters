@@ -27,6 +27,12 @@
     <ClCompile Include="List.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Stack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SeqList.h">
@@ -36,6 +42,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="List.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
