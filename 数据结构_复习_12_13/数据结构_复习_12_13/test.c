@@ -1,4 +1,5 @@
 #include "Queue.h"
+#include "Stack.h"
 
 //void Test()
 //{
@@ -552,10 +553,513 @@
 //}
 
 
+void Print(int* arr, int num)
+{
+	int i = 0;
+	for (i = 0; i < num; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+
+
+void InsertSort(int* arr, int num)
+{
+	int i = 0;
+	for (i = 0; i < num - 1; i++)
+	{
+		int end = i;
+		int tmp = arr[end + 1];
+		while (end >= 0)
+		{
+			if (tmp < arr[end])
+			{
+				arr[end + 1] = arr[end];
+				end--;
+			}
+			else
+				break;
+		}
+		arr[end + 1] = tmp;
+	}
+}
+
+
+void ShellSort(int* arr, int num)
+{
+	int gap = num;
+	while (gap > 1)
+	{
+		gap /= 2;
+		int i = 0;
+		for (i = 0; i <= num - gap; i++)
+		{
+			int end = i;
+			int tmp = arr[end + gap];
+			while (end >= 0)
+			{
+				if (tmp < arr[end])
+				{
+					arr[end + gap] = arr[end];
+					end-= gap;
+				}
+				else
+					break;
+			}
+			arr[end + gap] = tmp;
+		}
+	}
+	
+}
+
+
+void TestInsertSort()
+{
+	int arr[] = { 2,1,3,4,5,2,3,35,6 };
+	int size = sizeof(arr) / sizeof(arr[0]);
+	InsertSort(arr, size);
+	Print(arr, size);
+}
+
+
+void TestShellSort()
+{
+	int arr[] = { 2,1,3,4,5,2,3,35,6 };
+	int size = sizeof(arr) / sizeof(arr[0]);
+	ShellSort(arr, size);
+	Print(arr, size);
+}
+
+void Swap(int* addr1, int* addr2)
+{
+	int tmp = 0;
+	tmp = *addr1;
+	*addr1 = *addr2;
+	*addr2 = tmp;
+}
+
+
+//建小堆
+void AdjustDown(int* arr, int num, int root)
+{
+	int parent = root;
+	int child = root * 2 + 1;
+	while (child<num)
+	{
+		if (child + 1 < num &&arr[child] > arr[child + 1])
+			child++;
+		if (arr[child] < arr[parent])
+		{
+			Swap(&arr[child], &arr[parent]);
+			parent = child;
+			child = parent * 2 + 1;
+		}
+		else
+			break;
+	}
+}
+
+
+//建大堆
+void AdjustUp(int* arr, int num, int root)
+{
+	int parent = root;
+	int child = root * 2 + 1;
+	while (child < num)
+	{
+		if (child + 1 < num && arr[child] < arr[child + 1])
+			child++;
+		if (arr[child] > arr[parent])
+		{
+			Swap(&arr[child], &arr[parent]);
+			parent = child;
+			child = parent * 2 + 1;
+		}
+		else
+			break;
+	}
+}
+
+void HeapSort(int* arr, int num)
+{
+	while (num > 0)
+	{
+		int i = 0;
+		for (i = (num - 1 - 1) / 2; i >= 0; i--)
+		{
+			//AdjustDown(arr, num, i);
+			AdjustUp(arr, num, i); 
+		}
+		Swap(&arr[0], &arr[num-1]);
+		num--;
+	}
+}
+
+
+
+void TestHeapSort()
+{
+	int arr[] = { 2,1,3,4,5,2,3,35,6 };
+	int size = sizeof(arr) / sizeof(arr[0]);
+	HeapSort(arr, size);
+	Print(arr, size);
+}
+
+
+
+void SelectSort(int* arr, int num)
+{
+	int begin = 0;
+	int end = num - 1;
+	while (begin < end)
+	{
+		int mini = begin, maxi = begin;
+		for (int i = begin; i <= end; i++)
+		{
+			if (arr[i] > arr[maxi])
+			{
+				maxi = i;
+			}
+			if (arr[i] < arr[mini])
+			{
+				mini = i;
+			}
+		}
+		Swap(&arr[begin], &arr[mini]);
+		if (begin == maxi)
+		{
+			maxi = mini;
+		}
+		Swap(&arr[end], &arr[maxi]);
+		begin++;
+		end--;
+	}
+}
+
+
+
+void TestSelectSort()
+{
+	int arr[] = { 2,1,3,4,5,2,3,35,6 };
+	int size = sizeof(arr) / sizeof(arr[0]);
+	SelectSort(arr, size);
+	Print(arr, size);
+}
+
+
+
+void BubbleSort(int* arr, int num)
+{
+	int i = 0;
+	int j = 0;
+
+	for (i = 0; i < num; i++)
+	{
+		int exchange = 0;
+		for (j = 0; j < num - i - 1; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				Swap(&arr[j], &arr[j + 1]);
+				exchange = 1;
+			}
+		}
+		if (exchange == 0)
+		{
+			break;
+		}
+	}
+}
+
+
+void TestBubbleSort()
+{
+	int arr[] = { 2,1,3,4,5,2,3,35,6 };
+	int size = sizeof(arr) / sizeof(arr[0]);
+	BubbleSort(arr, size);
+	Print(arr, size);
+}
+
+
+//void QuickSort(int* arr, int left,int right)
+//{
+//	if (left >= right)
+//	{
+//		return;
+//	}
+//	int begin = left, end = right;
+//	int pivot = begin;
+//	int key = arr[begin];
+//	while (begin < end)
+//	{
+//		while (end > begin && arr[end] >= key)
+//			end--;
+//
+//		arr[pivot] = arr[end];
+//		pivot = end;
+//
+//		while (end > begin && arr[begin] <= key)
+//			begin++;
+//
+//		arr[pivot] = arr[begin];
+//		pivot = begin;
+//			
+//	}
+//	pivot = begin;
+//	arr[pivot] = key;
+//
+//	QuickSort(arr, left, pivot - 1);
+//	QuickSort(arr, pivot + 1,right );
+//}
+
+
+int GetMidIndix(int* arr, int left, int right)
+{
+	int mid = (left + right) / 2;
+	if (arr[left] < arr[mid])
+	{
+		if (arr[mid] < arr[right])
+			return mid;
+		else if (arr[left] > arr[right])
+			return left;
+		else
+			return right;
+	}
+	else
+	{
+		if (arr[mid] > arr[right])
+			return mid;
+		else if (arr[right] > arr[left])
+			return left;
+		else
+			return right;
+	}
+}
+
+//挖坑法
+int PartSort1(int* arr, int left, int right)
+{
+	int begin = left, end = right;
+	int Index = GetMidIndix(arr, left, right);
+	Swap(&arr[begin], &arr[Index]);
+
+	int pivot = begin;
+	int key = arr[begin];
+	while (begin < end)
+	{
+		while (end > begin && arr[end] >= key)
+			end--;
+
+		arr[pivot] = arr[end];
+		pivot = end;
+
+		while (end > begin && arr[begin] <= key)
+			begin++;
+
+		arr[pivot] = arr[begin];
+		pivot = begin;
+
+	}
+	pivot = begin;
+	arr[pivot] = key;
+
+	return pivot;
+}
+
+
+//左右指针法
+int PartSort2(int* arr, int left, int right)
+{
+	int begin = left, end = right;
+	int Index = GetMidIndix(arr, left, right);
+	Swap(&arr[begin], &arr[Index]);
+
+	int key = begin;
+
+	while (begin < end)
+	{
+		while (end > begin && arr[end] >= arr[key])
+			end--;
+
+		while (end > begin && arr[begin] <= arr[key])
+			begin++;
+
+		Swap(&arr[begin], &arr[end]);
+
+	}
+	Swap(&arr[begin], &arr[key]);
+
+	return begin;
+}
+
+
+int PartSort3(int* arr, int left, int right)
+{
+	int prev = left;
+	int cur = left + 1;
+	int index = GetMidIndix(arr, left, right);
+	Swap(&arr[left], &arr[index]);
+	int key = left;
+	while (cur <= right)
+	{
+		while (arr[cur] < arr[key] && ++prev!=cur)
+		{
+			Swap(&arr[prev], &arr[cur]);
+		}
+		cur++;
+		
+	}
+	Swap(&arr[key], &arr[prev]);
+	return prev;
+}
+
+
+void QuickSort(int* arr, int left, int right)
+{
+	if (left >= right)
+		return;
+
+	int keyIndex = PartSort2(arr, left, right);
+
+	if (keyIndex - 1 - left > 10)
+	{
+		QuickSort(arr, left, keyIndex - 1);
+	}
+	else
+	{
+		InsertSort(arr + left, keyIndex - 1 - left + 1);
+	}
+
+	if (right - keyIndex - 1 > 10)
+	{
+		QuickSort(arr, keyIndex + 1, right);
+	}
+	else
+	{
+		InsertSort(arr + keyIndex + 1, right - keyIndex - 1 + 1);
+	}
+
+}
+
+
+
+void QuickSortNonR(int* arr, int num)
+{
+	ST st;
+	StackInit(&st);
+
+	StackPush(&st, num - 1);
+	StackPush(&st, 0);
+
+	while (!StackEmpty(&st))
+	{
+		int left = StackTop(&st);
+		StackPop(&st);
+
+		int right = StackTop(&st);
+		StackPop(&st);
+
+		int KeyIndex = PartSort1(arr, left, right);
+
+		if (KeyIndex + 1 < right)
+		{
+			StackPush(&st, right);
+			StackPush(&st, KeyIndex + 1);
+		}
+
+		if (left < KeyIndex - 1)
+		{
+			StackPush(&st, KeyIndex - 1);
+			StackPush(&st, left);
+		}
+	}
+
+	StackDestory(&st);
+}
+
+
+void TestQuickSort()
+{
+	int arr[] = { 6,1,2,7,9,11,4,5,10,8 };
+	int size = sizeof(arr) / sizeof(arr[0]);
+	QuickSort(arr,0, size-1);
+	Print(arr, size);
+}
+
+
+//归并
+void _MergeSort(int* arr, int left, int right,int* arr2)
+{
+	if (left >= right)
+		return;
+
+	int mid = (left + right) / 2;
+	_MergeSort(arr, left, mid, arr2);
+	_MergeSort(arr, mid + 1, right, arr2);
+
+	int begin1 = left;
+	int end1 = mid;
+	int begin2 = mid + 1;
+	int end2 = right;
+	int i = left;
+	while (begin1 < end1 && begin2 < end2)
+	{
+		
+		if (arr[begin1] < arr[begin2])
+		{
+			arr2[i++] = arr[begin1++];
+		}
+		else
+		{
+			arr2[i++] = arr[begin2++];
+		}
+	}
+	while (begin1 <= end1)
+	{
+		arr2[i++] = arr[begin1++];
+	}
+	while (begin2 <= end2)
+	{
+		arr2[i++] = arr[begin2++];
+	}
+	for (i = left; i < right; i++)
+	{
+		arr[i] = arr2[i];
+	}
+}
+
+
+void MergeSort(int* arr, int num)
+{
+	int* arr2 = (int*)malloc(sizeof(int) * num);
+	if (arr2 == NULL)
+		return;
+	_MergeSort(arr, 0, num - 1, arr2);
+
+	free(arr2);
+}
+
+
+
+void MergeSortNonR(int* arr, int num)
+{
+	if (arr == NULL || num <= 0)
+		return;
+
+	int* arr2 = (int*)malloc(sizeof(int) * num);
+	if (arr2 == NULL)
+		return;
+
+
+
+	free(arr2);
+}
+
 
 int main()
 {
-
+	TestQuickSort();
 
 	return 0;
 }
