@@ -553,233 +553,233 @@
 //}
 
 
-void Print(int* arr, int num)
-{
-	int i = 0;
-	for (i = 0; i < num; i++)
-	{
-		printf("%d ", arr[i]);
-	}
-	printf("\n");
-}
-
-
-void InsertSort(int* arr, int num)
-{
-	int i = 0;
-	for (i = 0; i < num - 1; i++)
-	{
-		int end = i;
-		int tmp = arr[end + 1];
-		while (end >= 0)
-		{
-			if (tmp < arr[end])
-			{
-				arr[end + 1] = arr[end];
-				end--;
-			}
-			else
-				break;
-		}
-		arr[end + 1] = tmp;
-	}
-}
-
-
-void ShellSort(int* arr, int num)
-{
-	int gap = num;
-	while (gap > 1)
-	{
-		gap /= 2;
-		int i = 0;
-		for (i = 0; i <= num - gap; i++)
-		{
-			int end = i;
-			int tmp = arr[end + gap];
-			while (end >= 0)
-			{
-				if (tmp < arr[end])
-				{
-					arr[end + gap] = arr[end];
-					end-= gap;
-				}
-				else
-					break;
-			}
-			arr[end + gap] = tmp;
-		}
-	}
-	
-}
-
-
-void TestInsertSort()
-{
-	int arr[] = { 2,1,3,4,5,2,3,35,6 };
-	int size = sizeof(arr) / sizeof(arr[0]);
-	InsertSort(arr, size);
-	Print(arr, size);
-}
-
-
-void TestShellSort()
-{
-	int arr[] = { 2,1,3,4,5,2,3,35,6 };
-	int size = sizeof(arr) / sizeof(arr[0]);
-	ShellSort(arr, size);
-	Print(arr, size);
-}
-
-void Swap(int* addr1, int* addr2)
-{
-	int tmp = 0;
-	tmp = *addr1;
-	*addr1 = *addr2;
-	*addr2 = tmp;
-}
-
-
-//建小堆
-void AdjustDown(int* arr, int num, int root)
-{
-	int parent = root;
-	int child = root * 2 + 1;
-	while (child<num)
-	{
-		if (child + 1 < num &&arr[child] > arr[child + 1])
-			child++;
-		if (arr[child] < arr[parent])
-		{
-			Swap(&arr[child], &arr[parent]);
-			parent = child;
-			child = parent * 2 + 1;
-		}
-		else
-			break;
-	}
-}
-
-
-//建大堆
-void AdjustUp(int* arr, int num, int root)
-{
-	int parent = root;
-	int child = root * 2 + 1;
-	while (child < num)
-	{
-		if (child + 1 < num && arr[child] < arr[child + 1])
-			child++;
-		if (arr[child] > arr[parent])
-		{
-			Swap(&arr[child], &arr[parent]);
-			parent = child;
-			child = parent * 2 + 1;
-		}
-		else
-			break;
-	}
-}
-
-void HeapSort(int* arr, int num)
-{
-	while (num > 0)
-	{
-		int i = 0;
-		for (i = (num - 1 - 1) / 2; i >= 0; i--)
-		{
-			//AdjustDown(arr, num, i);
-			AdjustUp(arr, num, i); 
-		}
-		Swap(&arr[0], &arr[num-1]);
-		num--;
-	}
-}
-
-
-
-void TestHeapSort()
-{
-	int arr[] = { 2,1,3,4,5,2,3,35,6 };
-	int size = sizeof(arr) / sizeof(arr[0]);
-	HeapSort(arr, size);
-	Print(arr, size);
-}
-
-
-
-void SelectSort(int* arr, int num)
-{
-	int begin = 0;
-	int end = num - 1;
-	while (begin < end)
-	{
-		int mini = begin, maxi = begin;
-		for (int i = begin; i <= end; i++)
-		{
-			if (arr[i] > arr[maxi])
-			{
-				maxi = i;
-			}
-			if (arr[i] < arr[mini])
-			{
-				mini = i;
-			}
-		}
-		Swap(&arr[begin], &arr[mini]);
-		if (begin == maxi)
-		{
-			maxi = mini;
-		}
-		Swap(&arr[end], &arr[maxi]);
-		begin++;
-		end--;
-	}
-}
-
-
-
-void TestSelectSort()
-{
-	int arr[] = { 2,1,3,4,5,2,3,35,6 };
-	int size = sizeof(arr) / sizeof(arr[0]);
-	SelectSort(arr, size);
-	Print(arr, size);
-}
-
-
-
-void BubbleSort(int* arr, int num)
-{
-	int i = 0;
-	int j = 0;
-
-	for (i = 0; i < num; i++)
-	{
-		int exchange = 0;
-		for (j = 0; j < num - i - 1; j++)
-		{
-			if (arr[j] > arr[j + 1])
-			{
-				Swap(&arr[j], &arr[j + 1]);
-				exchange = 1;
-			}
-		}
-		if (exchange == 0)
-		{
-			break;
-		}
-	}
-}
-
-
-void TestBubbleSort()
-{
-	int arr[] = { 2,1,3,4,5,2,3,35,6 };
-	int size = sizeof(arr) / sizeof(arr[0]);
-	BubbleSort(arr, size);
-	Print(arr, size);
-}
+//void Print(int* arr, int num)
+//{
+//	int i = 0;
+//	for (i = 0; i < num; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//}
+//
+//
+//void InsertSort(int* arr, int num)
+//{
+//	int i = 0;
+//	for (i = 0; i < num - 1; i++)
+//	{
+//		int end = i;
+//		int tmp = arr[end + 1];
+//		while (end >= 0)
+//		{
+//			if (tmp < arr[end])
+//			{
+//				arr[end + 1] = arr[end];
+//				end--;
+//			}
+//			else
+//				break;
+//		}
+//		arr[end + 1] = tmp;
+//	}
+//}
+//
+//
+//void ShellSort(int* arr, int num)
+//{
+//	int gap = num;
+//	while (gap > 1)
+//	{
+//		gap /= 2;
+//		int i = 0;
+//		for (i = 0; i <= num - gap; i++)
+//		{
+//			int end = i;
+//			int tmp = arr[end + gap];
+//			while (end >= 0)
+//			{
+//				if (tmp < arr[end])
+//				{
+//					arr[end + gap] = arr[end];
+//					end-= gap;
+//				}
+//				else
+//					break;
+//			}
+//			arr[end + gap] = tmp;
+//		}
+//	}
+//	
+//}
+//
+//
+//void TestInsertSort()
+//{
+//	int arr[] = { 2,1,3,4,5,2,3,35,6 };
+//	int size = sizeof(arr) / sizeof(arr[0]);
+//	InsertSort(arr, size);
+//	Print(arr, size);
+//}
+//
+//
+//void TestShellSort()
+//{
+//	int arr[] = { 2,1,3,4,5,2,3,35,6 };
+//	int size = sizeof(arr) / sizeof(arr[0]);
+//	ShellSort(arr, size);
+//	Print(arr, size);
+//}
+//
+//void Swap(int* addr1, int* addr2)
+//{
+//	int tmp = 0;
+//	tmp = *addr1;
+//	*addr1 = *addr2;
+//	*addr2 = tmp;
+//}
+//
+//
+////建小堆
+//void AdjustDown(int* arr, int num, int root)
+//{
+//	int parent = root;
+//	int child = root * 2 + 1;
+//	while (child<num)
+//	{
+//		if (child + 1 < num &&arr[child] > arr[child + 1])
+//			child++;
+//		if (arr[child] < arr[parent])
+//		{
+//			Swap(&arr[child], &arr[parent]);
+//			parent = child;
+//			child = parent * 2 + 1;
+//		}
+//		else
+//			break;
+//	}
+//}
+//
+//
+////建大堆
+//void AdjustUp(int* arr, int num, int root)
+//{
+//	int parent = root;
+//	int child = root * 2 + 1;
+//	while (child < num)
+//	{
+//		if (child + 1 < num && arr[child] < arr[child + 1])
+//			child++;
+//		if (arr[child] > arr[parent])
+//		{
+//			Swap(&arr[child], &arr[parent]);
+//			parent = child;
+//			child = parent * 2 + 1;
+//		}
+//		else
+//			break;
+//	}
+//}
+//
+//void HeapSort(int* arr, int num)
+//{
+//	while (num > 0)
+//	{
+//		int i = 0;
+//		for (i = (num - 1 - 1) / 2; i >= 0; i--)
+//		{
+//			//AdjustDown(arr, num, i);
+//			AdjustUp(arr, num, i); 
+//		}
+//		Swap(&arr[0], &arr[num-1]);
+//		num--;
+//	}
+//}
+//
+//
+//
+//void TestHeapSort()
+//{
+//	int arr[] = { 2,1,3,4,5,2,3,35,6 };
+//	int size = sizeof(arr) / sizeof(arr[0]);
+//	HeapSort(arr, size);
+//	Print(arr, size);
+//}
+//
+//
+//
+//void SelectSort(int* arr, int num)
+//{
+//	int begin = 0;
+//	int end = num - 1;
+//	while (begin < end)
+//	{
+//		int mini = begin, maxi = begin;
+//		for (int i = begin; i <= end; i++)
+//		{
+//			if (arr[i] > arr[maxi])
+//			{
+//				maxi = i;
+//			}
+//			if (arr[i] < arr[mini])
+//			{
+//				mini = i;
+//			}
+//		}
+//		Swap(&arr[begin], &arr[mini]);
+//		if (begin == maxi)
+//		{
+//			maxi = mini;
+//		}
+//		Swap(&arr[end], &arr[maxi]);
+//		begin++;
+//		end--;
+//	}
+//}
+//
+//
+//
+//void TestSelectSort()
+//{
+//	int arr[] = { 2,1,3,4,5,2,3,35,6 };
+//	int size = sizeof(arr) / sizeof(arr[0]);
+//	SelectSort(arr, size);
+//	Print(arr, size);
+//}
+//
+//
+//
+//void BubbleSort(int* arr, int num)
+//{
+//	int i = 0;
+//	int j = 0;
+//
+//	for (i = 0; i < num; i++)
+//	{
+//		int exchange = 0;
+//		for (j = 0; j < num - i - 1; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//			{
+//				Swap(&arr[j], &arr[j + 1]);
+//				exchange = 1;
+//			}
+//		}
+//		if (exchange == 0)
+//		{
+//			break;
+//		}
+//	}
+//}
+//
+//
+//void TestBubbleSort()
+//{
+//	int arr[] = { 2,1,3,4,5,2,3,35,6 };
+//	int size = sizeof(arr) / sizeof(arr[0]);
+//	BubbleSort(arr, size);
+//	Print(arr, size);
+//}
 
 
 //void QuickSort(int* arr, int left,int right)
@@ -814,252 +814,581 @@ void TestBubbleSort()
 //}
 
 
-int GetMidIndix(int* arr, int left, int right)
-{
-	int mid = (left + right) / 2;
-	if (arr[left] < arr[mid])
-	{
-		if (arr[mid] < arr[right])
-			return mid;
-		else if (arr[left] > arr[right])
-			return left;
-		else
-			return right;
+//int GetMidIndix(int* arr, int left, int right)
+//{
+//	int mid = (left + right) / 2;
+//	if (arr[left] < arr[mid])
+//	{
+//		if (arr[mid] < arr[right])
+//			return mid;
+//		else if (arr[left] > arr[right])
+//			return left;
+//		else
+//			return right;
+//	}
+//	else
+//	{
+//		if (arr[mid] > arr[right])
+//			return mid;
+//		else if (arr[right] > arr[left])
+//			return left;
+//		else
+//			return right;
+//	}
+//}
+//
+////挖坑法
+//int PartSort1(int* arr, int left, int right)
+//{
+//	int begin = left, end = right;
+//	int Index = GetMidIndix(arr, left, right);
+//	Swap(&arr[begin], &arr[Index]);
+//
+//	int pivot = begin;
+//	int key = arr[begin];
+//	while (begin < end)
+//	{
+//		while (end > begin && arr[end] >= key)
+//			end--;
+//
+//		arr[pivot] = arr[end];
+//		pivot = end;
+//
+//		while (end > begin && arr[begin] <= key)
+//			begin++;
+//
+//		arr[pivot] = arr[begin];
+//		pivot = begin;
+//
+//	}
+//	pivot = begin;
+//	arr[pivot] = key;
+//
+//	return pivot;
+//}
+//
+//
+////左右指针法
+//int PartSort2(int* arr, int left, int right)
+//{
+//	int begin = left, end = right;
+//	int Index = GetMidIndix(arr, left, right);
+//	Swap(&arr[begin], &arr[Index]);
+//
+//	int key = begin;
+//
+//	while (begin < end)
+//	{
+//		while (end > begin && arr[end] >= arr[key])
+//			end--;
+//
+//		while (end > begin && arr[begin] <= arr[key])
+//			begin++;
+//
+//		Swap(&arr[begin], &arr[end]);
+//
+//	}
+//	Swap(&arr[begin], &arr[key]);
+//
+//	return begin;
+//}
+//
+//
+//int PartSort3(int* arr, int left, int right)
+//{
+//	int prev = left;
+//	int cur = left + 1;
+//	int index = GetMidIndix(arr, left, right);
+//	Swap(&arr[left], &arr[index]);
+//	int key = left;
+//	while (cur <= right)
+//	{
+//		while (arr[cur] < arr[key] && ++prev!=cur)
+//		{
+//			Swap(&arr[prev], &arr[cur]);
+//		}
+//		cur++;
+//		
+//	}
+//	Swap(&arr[key], &arr[prev]);
+//	return prev;
+//}
+//
+//
+//void QuickSort(int* arr, int left, int right)
+//{
+//	if (left >= right)
+//		return;
+//
+//	int keyIndex = PartSort2(arr, left, right);
+//
+//	if (keyIndex - 1 - left > 10)
+//	{
+//		QuickSort(arr, left, keyIndex - 1);
+//	}
+//	else
+//	{
+//		InsertSort(arr + left, keyIndex - 1 - left + 1);
+//	}
+//
+//	if (right - keyIndex - 1 > 10)
+//	{
+//		QuickSort(arr, keyIndex + 1, right);
+//	}
+//	else
+//	{
+//		InsertSort(arr + keyIndex + 1, right - keyIndex - 1 + 1);
+//	}
+//
+//}
+//
+//
+//
+//void QuickSortNonR(int* arr, int num)
+//{
+//	ST st;
+//	StackInit(&st);
+//
+//	StackPush(&st, num - 1);
+//	StackPush(&st, 0);
+//
+//	while (!StackEmpty(&st))
+//	{
+//		int left = StackTop(&st);
+//		StackPop(&st);
+//
+//		int right = StackTop(&st);
+//		StackPop(&st);
+//
+//		int KeyIndex = PartSort1(arr, left, right);
+//
+//		if (KeyIndex + 1 < right)
+//		{
+//			StackPush(&st, right);
+//			StackPush(&st, KeyIndex + 1);
+//		}
+//
+//		if (left < KeyIndex - 1)
+//		{
+//			StackPush(&st, KeyIndex - 1);
+//			StackPush(&st, left);
+//		}
+//	}
+//
+//	StackDestory(&st);
+//}
+//
+//
+//void TestQuickSort()
+//{
+//	int arr[] = { 6,1,2,7,9,11,4,5,10,8 };
+//	int size = sizeof(arr) / sizeof(arr[0]);
+//	QuickSort(arr,0, size-1);
+//	Print(arr, size);
+//}
+//
+//
+////归并
+//void _MergeSort(int* arr, int left, int right,int* arr2)
+//{
+//	if (left >= right)
+//		return;
+//
+//	int mid = (left + right) / 2;
+//	_MergeSort(arr, left, mid, arr2);
+//	_MergeSort(arr, mid + 1, right, arr2);
+//
+//	int begin1 = left;
+//	int end1 = mid;
+//	int begin2 = mid + 1;
+//	int end2 = right;
+//	int i = left;
+//	while (begin1 <= end1 && begin2 <= end2)
+//	{
+//		
+//		if (arr[begin1] < arr[begin2])
+//		{
+//			arr2[i++] = arr[begin1++];
+//		}
+//		else
+//		{
+//			arr2[i++] = arr[begin2++];
+//		}
+//	}
+//	while (begin1 <= end1)
+//	{
+//		arr2[i++] = arr[begin1++];
+//	}
+//	while (begin2 <= end2)
+//	{
+//		arr2[i++] = arr[begin2++];
+//	}
+//	for (i = left; i < right; i++)
+//	{
+//		arr[i] = arr2[i];
+//	}
+//}
+//
+//
+//void MergeSort(int* arr, int num)
+//{
+//	int* arr2 = (int*)malloc(sizeof(int) * num);
+//	if (arr2 == NULL)
+//		return;
+//	_MergeSort(arr, 0, num - 1, arr2);
+//
+//	free(arr2);
+//}
+//
+//
+//
+//void MergeSortNonR(int* arr, int num)
+//{
+//	if (arr == NULL || num <= 0)
+//		return;
+//
+//	int* arr2 = (int*)malloc(sizeof(int) * num);
+//	if (arr2 == NULL)
+//		return;
+//
+//	int gap = 1;
+//	int i = 0;
+//	
+//	
+//	while (gap <= num)
+//	{
+//		for (i = 0; i < num; i += 2 * gap)
+//		{
+//			int begin1 = i;
+//			int end1 = i + gap - 1;
+//			int begin2 = i + gap;
+//			int end2 = i + 2 * gap - 1;
+//
+//			if (end1 >= num)
+//				end1 = num - 1;
+//
+//			if (end2 >= num)
+//				end2 = num - 1;
+//
+//			int Index = i;
+//			while (begin1 <= end1 && begin2 <= end2)
+//			{
+//
+//				if (arr[begin1] < arr[begin2])
+//				{
+//					arr2[Index++] = arr[begin1++];
+//				}
+//				else
+//				{
+//					arr2[Index++] = arr[begin2++];
+//				}
+//			}
+//			while (begin1 <= end1)
+//			{
+//				arr2[Index++] = arr[begin1++];
+//			}
+//			while (begin2 <= end2)
+//			{
+//				arr2[Index++] = arr[begin2++];
+//			}
+//			
+//		}
+//		for (int j = 0; j < num; j++)
+//		{
+//			arr[j] = arr2[j];
+//		}
+//		
+//		gap *= 2;
+//	}
+//
+//
+//	free(arr2);
+//}
+//
+//
+//void CountSort(int* arr, int num)
+//{
+//	int i = 0;
+//	int max = arr[0];
+//	int min = arr[0];
+//	for (i = 0; i < num; i++)
+//	{
+//		if (arr[i] > max)
+//		{
+//			max = arr[i];
+//		}
+//		if (arr[i] < min)
+//		{
+//			min = arr[i];
+//		}
+//	}
+//
+//	int range = max - min + 1;
+//	int* count = (int*)malloc(sizeof(int) * range);
+//	if (count == NULL)
+//		exit(-1);
+//
+//	memset(count, 0, sizeof(int) * range);
+//
+//	for (i = 0; i < num; i++)
+//	{
+//		count[arr[i] - min]++;
+//	}
+//
+//	int j = 0;
+//	for (i = 0; i < range; i++)
+//	{
+//		while (count[i]--)
+//		{
+//			arr[j] = i + min;
+//		}
+//	}
+//
+//	free(count);
+//	count = NULL;
+//}
+//
+//
+//int main()
+//{
+//	TestQuickSort();
+//
+//	return 0;
+//}
+
+
+
+
+bool IsPath(int** maze, int row, int col, PT pos) {
+	if (pos.row >= 0 && pos.col >= 0 && pos.row < row && pos.col < col &&
+		maze[pos.row][pos.col] == 0) {
+		return true;
 	}
-	else
-	{
-		if (arr[mid] > arr[right])
-			return mid;
-		else if (arr[right] > arr[left])
-			return left;
-		else
-			return right;
+	else {
+		return false;
 	}
 }
 
-//挖坑法
-int PartSort1(int* arr, int left, int right)
-{
-	int begin = left, end = right;
-	int Index = GetMidIndix(arr, left, right);
-	Swap(&arr[begin], &arr[Index]);
-
-	int pivot = begin;
-	int key = arr[begin];
-	while (begin < end)
-	{
-		while (end > begin && arr[end] >= key)
-			end--;
-
-		arr[pivot] = arr[end];
-		pivot = end;
-
-		while (end > begin && arr[begin] <= key)
-			begin++;
-
-		arr[pivot] = arr[begin];
-		pivot = begin;
-
+bool GetMazePath(int** maze, int row, int col, PT cur) {
+	StackPush(&path, cur);
+	if (cur.row == row - 1 && cur.col == col - 1) {
+		return true;
 	}
-	pivot = begin;
-	arr[pivot] = key;
 
-	return pivot;
+	PT next;
+	//走过的路径变为2
+	maze[cur.row][cur.col] = 2;
+
+	//上
+	next = cur;
+	next.row -= 1;
+	if (IsPath(maze, row, col, next)) {
+		if (GetMazePath(maze, row, col, next))
+			return true;
+	}
+
+	//下
+	next = cur;
+	next.row += 1;
+	if (IsPath(maze, row, col, next)) {
+		if (GetMazePath(maze, row, col, next))
+			return true;
+	}
+
+	//左
+	next = cur;
+	next.col -= 1;
+	if (IsPath(maze, row, col, next)) {
+		if (GetMazePath(maze, row, col, next))
+			return true;
+	}
+
+	//右
+	next = cur;
+	next.col += 1;
+	if (IsPath(maze, row, col, next)) {
+		if (GetMazePath(maze, row, col, next))
+			return true;
+	}
+
+	StackPop(&path);
+	return false;
 }
 
 
-//左右指针法
-int PartSort2(int* arr, int left, int right)
+void PrintPath(void)
 {
-	int begin = left, end = right;
-	int Index = GetMidIndix(arr, left, right);
-	Swap(&arr[begin], &arr[Index]);
-
-	int key = begin;
-
-	while (begin < end)
+	ST tmp;
+	StackInit(&tmp);
+	while (!StackEmpty(&path))
 	{
-		while (end > begin && arr[end] >= arr[key])
-			end--;
-
-		while (end > begin && arr[begin] <= arr[key])
-			begin++;
-
-		Swap(&arr[begin], &arr[end]);
-
+		StackPush(&tmp, StackTop(&path));
+		StackPop(&path);
 	}
-	Swap(&arr[begin], &arr[key]);
-
-	return begin;
+	while (!StackEmpty(&tmp))
+	{
+		PT top = StackTop(&tmp);
+		printf("(%d,%d)\n", top.row, top.col);
+		StackPop(&tmp);
+	}
+	StackDestory(&tmp);
 }
 
+int main() {
+	int row, col;
+	scanf("%d%d", &row, &col);
+	int** maze = (int**)malloc(sizeof(int*) * row);
+	if (maze == NULL) {
+		exit(-1);
+	}
+	for (int i = 0; i < row; i++) {
+		maze[i] = (int*)malloc(sizeof(int) * col);
+	}
 
-int PartSort3(int* arr, int left, int right)
-{
-	int prev = left;
-	int cur = left + 1;
-	int index = GetMidIndix(arr, left, right);
-	Swap(&arr[left], &arr[index]);
-	int key = left;
-	while (cur <= right)
-	{
-		while (arr[cur] < arr[key] && ++prev!=cur)
-		{
-			Swap(&arr[prev], &arr[cur]);
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < row; i++) {
+		for (j = 0; j < col; j++) {
+			scanf("%d", &maze[i][j]);
 		}
-		cur++;
-		
 	}
-	Swap(&arr[key], &arr[prev]);
-	return prev;
-}
 
+	StackInit(&path);
+	PT entry = { 0, 0 };
 
-void QuickSort(int* arr, int left, int right)
-{
-	if (left >= right)
-		return;
-
-	int keyIndex = PartSort2(arr, left, right);
-
-	if (keyIndex - 1 - left > 10)
+	if (GetMazePath(maze, row, col, entry))
 	{
-		QuickSort(arr, left, keyIndex - 1);
+		PrintPath();
 	}
-	else
+
+	StackDestory(&path);
+
+	for (int i = 0; i < row; i++)
 	{
-		InsertSort(arr + left, keyIndex - 1 - left + 1);
+		free(maze[i]);
 	}
-
-	if (right - keyIndex - 1 > 10)
-	{
-		QuickSort(arr, keyIndex + 1, right);
-	}
-	else
-	{
-		InsertSort(arr + keyIndex + 1, right - keyIndex - 1 + 1);
-	}
-
-}
-
-
-
-void QuickSortNonR(int* arr, int num)
-{
-	ST st;
-	StackInit(&st);
-
-	StackPush(&st, num - 1);
-	StackPush(&st, 0);
-
-	while (!StackEmpty(&st))
-	{
-		int left = StackTop(&st);
-		StackPop(&st);
-
-		int right = StackTop(&st);
-		StackPop(&st);
-
-		int KeyIndex = PartSort1(arr, left, right);
-
-		if (KeyIndex + 1 < right)
-		{
-			StackPush(&st, right);
-			StackPush(&st, KeyIndex + 1);
-		}
-
-		if (left < KeyIndex - 1)
-		{
-			StackPush(&st, KeyIndex - 1);
-			StackPush(&st, left);
-		}
-	}
-
-	StackDestory(&st);
-}
-
-
-void TestQuickSort()
-{
-	int arr[] = { 6,1,2,7,9,11,4,5,10,8 };
-	int size = sizeof(arr) / sizeof(arr[0]);
-	QuickSort(arr,0, size-1);
-	Print(arr, size);
-}
-
-
-//归并
-void _MergeSort(int* arr, int left, int right,int* arr2)
-{
-	if (left >= right)
-		return;
-
-	int mid = (left + right) / 2;
-	_MergeSort(arr, left, mid, arr2);
-	_MergeSort(arr, mid + 1, right, arr2);
-
-	int begin1 = left;
-	int end1 = mid;
-	int begin2 = mid + 1;
-	int end2 = right;
-	int i = left;
-	while (begin1 < end1 && begin2 < end2)
-	{
-		
-		if (arr[begin1] < arr[begin2])
-		{
-			arr2[i++] = arr[begin1++];
-		}
-		else
-		{
-			arr2[i++] = arr[begin2++];
-		}
-	}
-	while (begin1 <= end1)
-	{
-		arr2[i++] = arr[begin1++];
-	}
-	while (begin2 <= end2)
-	{
-		arr2[i++] = arr[begin2++];
-	}
-	for (i = left; i < right; i++)
-	{
-		arr[i] = arr2[i];
-	}
-}
-
-
-void MergeSort(int* arr, int num)
-{
-	int* arr2 = (int*)malloc(sizeof(int) * num);
-	if (arr2 == NULL)
-		return;
-	_MergeSort(arr, 0, num - 1, arr2);
-
-	free(arr2);
-}
-
-
-
-void MergeSortNonR(int* arr, int num)
-{
-	if (arr == NULL || num <= 0)
-		return;
-
-	int* arr2 = (int*)malloc(sizeof(int) * num);
-	if (arr2 == NULL)
-		return;
-
-
-
-	free(arr2);
-}
-
-
-int main()
-{
-	TestQuickSort();
-
+	free(maze);
+	maze = NULL;
 	return 0;
+}
+
+
+
+bool IsPath(int** maze, int row, int col, PT pos) {
+    if (pos.row >= 0 && pos.col >= 0 && pos.row < row && pos.col < col &&
+        maze[pos.row][pos.col] == 1) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+void GetMazePath(int** maze, int row, int col, PT cur, int power) {
+    StackPush(&path, cur);
+    if (cur.row == 0 && cur.col == col - 1) {
+        if (StackEmpty(&minpath) && power >= 0 || StackSize(&path) < StackSize(&minpath))
+        {
+            StackDestory(&minpath);
+            StackCopy(&path, &minpath);
+        }
+    }
+
+    PT next;
+    //走过的路径变为2
+    maze[cur.row][cur.col] = 2;
+
+    //上
+    next = cur;
+    next.row -= 1;
+    if (IsPath(maze, row, col, next)) {
+        GetMazePath(maze, row, col, next, power - 3);
+    }
+
+    //下
+    next = cur;
+    next.row += 1;
+    if (IsPath(maze, row, col, next)) {
+        GetMazePath(maze, row, col, next, power);
+    }
+
+    //左
+    next = cur;
+    next.col -= 1;
+    if (IsPath(maze, row, col, next)) {
+        GetMazePath(maze, row, col, next, power - 1);
+    }
+
+    //右
+    next = cur;
+    next.col += 1;
+    if (IsPath(maze, row, col, next)) {
+        GetMazePath(maze, row, col, next, power - 1);
+    }
+    maze[cur.row][cur.col] = 1;
+
+    StackPop(&path);
+
+}
+
+
+void PrintPath(ST* ps) {
+    ST tmp;
+    StackInit(&tmp);
+    while (!StackEmpty(ps)) {
+        StackPush(&tmp, StackTop(ps));
+        StackPop(ps);
+    }
+    while (StackSize(&tmp) > 1) {
+        PT top = StackTop(&tmp);
+        printf("[%d,%d],", top.row, top.col);
+        StackPop(&tmp);
+    }
+    PT top = StackTop(&tmp);
+    printf("[%d,%d]", top.row, top.col);
+    StackPop(&tmp);
+    StackDestory(&tmp);
+}
+
+int main() {
+    int row, col, power;
+    scanf("%d%d%d", &row, &col, &power);
+    int** maze = (int**)malloc(sizeof(int*) * row);
+    if (maze == NULL) {
+        exit(-1);
+    }
+    for (int i = 0; i < row; i++) {
+        maze[i] = (int*)malloc(sizeof(int) * col);
+    }
+
+    int i = 0;
+    int j = 0;
+    for (i = 0; i < row; i++) {
+        for (j = 0; j < col; j++) {
+            scanf("%d", &maze[i][j]);
+        }
+    }
+
+    StackInit(&path);
+    StackInit(&minpath);
+    PT entry = { 0, 0 };
+
+    GetMazePath(maze, row, col, entry, power);
+
+    if (!StackEmpty(&minpath))
+    {
+        PrintPath(&minpath);
+    }
+    else {
+        printf("Can not escape!\n");
+    }
+
+    StackDestory(&path);
+    StackDestory(&minpath);
+    for (int i = 0; i < row; i++) {
+        free(maze[i]);
+    }
+    free(maze);
+    maze = NULL;
+    return 0;
 }
